@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<style>
+div {text-align: right;}
+a.button {
+  display: inline-block;
+  padding: 5px;
+  height: 24px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  text-align: right;
+  background-color: #4D28B2;
+  border: 1px solid gray;
+}
+p {text-align: center;
+font-size: 40px;}
+form {text-align: center;}
+
+</style>
+</head>
+<body>
+<div><a href="file:///C:/Users/Elton/Documents/Bonr/DoggoSwipe" class="button">Find Dogs</a>
+<a href="file:///C:/Users/Elton/Documents/Bonr/Messages" class="button">Messages</a>
+<a href="file:///C:/Users/Elton/Documents/Bonr/Home" class="button">Sign Out</a>
+</div>
+<p><b>Upload Doggo photo(s) here</b></p>
+<form name="myWebForm" action="mailto:youremail@email.com" method="post">
+			<input type="hidden" name="MAX_FILE_SIZE" value="500" />
+			<input type="file" name="uploadField" />
+			</form>
+
+
+</body>

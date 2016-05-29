@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+h1 {text-align: center;
+font-size: 40px;}
+p {text-align: center;
+font-size: 20px;}
+div {text-align: center;}
+a.button {
+  display: inline-block;
+  padding: 15px;
+  height: 24px;
+  font-size: 21px;
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  text-align: right;
+  background-color: #4D28B2;
+  border: 1px solid gray;
+}
+</style>
+</head>
+<body>
+<h1>Sign Up</h1>
+<p>Username <INPUT NAME="Username" SIZE="48"></p>
+<p>Password <INPUT NAME="Password" SIZE=48"></p>
+<div><a href="file:///C:/Users/Elton/Documents/Bonr/DoggoRegistration" class="button"><b>Register Doggo</b></a></div>
+</body>

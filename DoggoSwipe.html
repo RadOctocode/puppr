@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">-->
+</script>
+<script>
+
+var Dref = new Firebase("https://dogbaseww.firebaseio.com/");
+
+var pull= function(){
+var subRef = new Firebase("https://dogbaseww.firebaseio.com/");
+subRef.on('child_added', function(snapshot){
+var name=snapshot.val().name;
+document.getElementById("name").innerHTML=name;
+var age=snapshot.val().age;
+document.getElementById("age").innerHTML=age;
+var gender=snapshot.val().gender;
+document.getElementById("gender").innerHTML=gender;
+var notes=snapshot.val().notes;
+document.getElementById("notes").innerHTML=notes;
+var nueter=snapshot.val().nueter;
+document.getElementById("nueter").innerHTML=nueter;
+console.log(name,age,gender,notes,nueter);
+});
+}
+var Message= function(){
+window.location = "file:///F:/Bonr/Messages.html";
+}
+</script>
+<style>
+body {
+	background-image: url("file:///F:/Bonr/background.png");
+	color: #FFCC00;
+}
+div {text-align: center;}
+a.button {
+  display: inline-block;
+  padding: 5px;
+  height: 24px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  text-align: right;
+  background-color: #4D28B2;
+  border: 1px solid gray;
+}
+h2{
+ text-align: center;
+}
+h3{
+
+ text-align: center;
+ }
+ .button {
+  text-align:center;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #FFCC00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+</style>
+</head>
+<body>
+<a href="file:///F:/Bonr/Messages.html" class="button">Messages</a>
+<a href="file:///F:/Bonr/Home.html" class="button">Sign Out</a>
+<div>
+<input class="button" type="button" value="Submit" onclick="pull();"><!--move to main page displaying other dogs-->
+<input class="button" type="button" value="Next" onclick="nextDog();"><!--move to main page displaying other dogs-->
+</div>
+<h2 id="name">NAME</h2>
+<h3><b>age:</b></h3><h5 id="age"></h5>
+<h3><b>gender:</b></h3><h5 id="gender"></h5>
+<h3><b>notes:</b></h3><h5 id="notes"></h5>
+<h3><b>nuetered?:</b></h3><h5 id="nueter"></h5>
+<div><input class="button" type="button" value="Message this dog" onclick="Message();"></div><!--move to main page displaying other dogs-->
+</body>

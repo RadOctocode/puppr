@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<script>
+var ref = new Firebase("https://flickering-fire-951.firebaseio.com/messages");
+var MessagesRef = ref.child("messages");
+
+  function SendMessage(){
+  var message=document.getElementById("message").value;
+	MessageRef=ref.push({message:message
+	document.getElementById("message").value = "";
+	
+  }
+</script>
+<style>
+body {
+	background-image: url("file:///F:/Bonr/background.png");
+}
+h1 {text-align: center;}
+h3 {text-align: center;
+	color: #FFCC00;
+}
+a.button {
+ display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #FFCC00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+div {text-align: right;}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #FFCC00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+</style>
+</head>
+<body>
+<div>
+<a href="file:///F:/Bonr/DoggoSwipe.html" class="button">Find Dogs</a>
+<a href="file:///F:/Bonr/Home.html" class="button">Sign Out</a>
+<a href="file:///F:/Bonr/Home.html" class="button" style="text-align:center;">Home</a>
+</div>
+<h3 id="mess">hi!<h3>
+  <input type="text" id="message"><br>
+  <br><input type="button" value="Submit" onclick="SendMessage();" class="button"><!--move to main page displaying other dogs-->
+</body>

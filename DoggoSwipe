@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<style>
+div {text-align: right;}
+a.button {
+  display: inline-block;
+  padding: 5px;
+  height: 24px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  text-align: right;
+  background-color: #4D28B2;
+  border: 1px solid gray;
+}
+</style>
+</head>
+<body>
+<div>
+<a href="file:///C:/Users/Elton/Documents/Bonr/Messages" class="button">Messages</a>
+<a href="file:///C:/Users/Elton/Documents/Bonr/Home" class="button">Sign Out</a>
+</div>
+</body>

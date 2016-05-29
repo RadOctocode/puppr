@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+<head>
+<style>
+h1 {text-align: center;
+font-size: 40px;}
+p {text-align: center;
+font-size: 20px;}
+div {text-align: center;}
+a.button {
+  display: inline-block;
+  padding: 15px;
+  height: 24px;
+  font-size: 21px;
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  text-align: right;
+  background-color: #4D28B2;
+  border: 1px solid gray;
+}
+form {text-align: center;}
+</style>
+</head>
+
+<body>
+<h1>Doggo Registration</h1>
+<p>Doggo Name <INPUT NAME="Doggo Name" SIZE="48"></p>
+<p>Doggo Sex <INPUT NAME="Doggo Sex" SIZE="48"></p>
+<p>Doggo Age <INPUT NAME="Doggo Age" SIZE="48"></p>
+<p>Neutered/Spayed? <INPUT NAME="Yes/No" SIZE="48"></p>
+<p>Notes <INPUT NAME="Notes" SIZE="48"></p>
+<p><b>Upload Doggo photo(s) here</b></p>
+<form name="myWebForm" action="mailto:youremail@email.com" method="post">
+			<input type="hidden" name="MAX_FILE_SIZE" value="500" />
+			<input type="file" name="uploadField" />
+			</form>
+<br>
+			
+<div><a href="file:///C:/Users/Elton/Documents/Bonr/DoggoSwipe" class="button"><b>Donzo</b></a></div>
+</body>

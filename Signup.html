@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script>
+var ref = new Firebase("https://flickering-fire-951.firebaseio.com");
+
+var usersRef = ref.child("users");
+
+function create() {
+var username=document.getElementById("cruser").value;
+var password=document.getElementById("crpass").value;
+if((username!="")&&(password!="")){
+
+var NewAccRef=usersRef.push();
+NewAccRef.set(
+{user:username, pass:password});
+var postID = NewAccRef.key();
+document.getElementById("cruser").value = "";
+document.getElementById("crpass").value = "";
+window.location = "file:///F:/Bonr/DoggoRegistration.html";
+}
+else{
+alert("You need a username and password")
+}
+}
+</script>
+<style>
+body {background-image: url("file:///F:/Bonr/background.png");}
+h1 {text-align: center;
+font-size: 40px;
+color: #FFCC00;}
+p {text-align: center;
+font-size: 20px;
+color: #FFCC00;}
+div {text-align: center;}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #FFCC00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #ddb100}
+
+.button:active {
+  background-color: #ddb100;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+}
+inputs:-webkit-input-placeholder {
+    color: #b5b5b5;
+}
+
+inputs-moz-placeholder {
+    color: #b5b5b5;
+}
+
+.inputs {
+    background: #f5f5f5;
+    font-size: 0.8rem;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    padding: 13px 10px;
+    width: 270px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 3px rgba( 0, 0, 0, 0.1 );
+    clear: both;
+}
+
+.inputs:focus {
+    background: #fff;
+    box-shadow: 0 0 0 3px #fff38e, inset 0 2px 3px rgba( 0, 0, 0, 0.2 ), 0px 5px 5px rgba( 0, 0, 0, 0.15 );
+    outline: none;
+}
+
+</style>
+</head>
+<body>
+<h1>Sign Up</h1>
+<p> <INPUT NAME="Username" SIZE="48" id="cruser" class="inputs" placeholder="username"></p>
+<p> <INPUT NAME="Password" SIZE=48" id="crpass" class="inputs"placeholder="Password"></p>
+<div><input class="button" type="button" value="Submit" onclick="create();"></div><!--move to main page displaying other dogs-->
+</body>

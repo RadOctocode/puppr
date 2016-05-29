@@ -1,0 +1,79 @@
+<!Doctype html>
+<html>
+<head>
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script>
+var ref = new Firebase("https://dogbaseww.firebaseio.com/");
+var DogRef = ref.child("dogs");
+//commit
+  function createDog(){
+	name=document.getElementById("name").value;
+	age=document.getElementById("age").value;
+	gender=document.getElementById("gender").value;
+	nueter=document.getElementById("nueter").value;
+	notes=document.getElementById("notes").value;
+	NewDogRef=ref.push({name:name, age:age, gender:gender, nueter:nueter, notes:notes});
+	window.location = "file:///F:/Bonr/DoggoSwipe.html";
+	//move page
+  }
+</script>
+<style>
+body {
+	background-image: url("file:///F:/Bonr/background.png");
+	color: #FFCC00;
+}
+h1 {text-align: center;
+font-size: 40px;}
+p {text-align: center;
+font-size: 20px;}
+div {text-align: center;}
+a.button {
+  display: inline-block;
+  padding: 15px;
+  height: 24px;
+  font-size: 21px;
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  text-align: right;
+  background-color: #4D28B2;
+  border: 1px solid gray;
+}
+form {text-align: center;}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #FFCC00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #ddb100}
+
+.button:active {
+  background-color: #ddb100;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+
+<body>
+<h1>Doggo Registration</h1>
+<p>Doggo Name <INPUT NAME="Doggo Name" SIZE="48" id="name"></p>
+<p>Doggo Gender <INPUT NAME="Doggo Sex" SIZE="48" id="gender"></p>
+<p>Doggo Age <INPUT NAME="Doggo Age" SIZE="48" id="age"></p>
+<p>Neutered/Spayed? <INPUT NAME="Yes/No" SIZE="48" id="nueter"></p>
+<p>Notes <INPUT NAME="Notes" SIZE="48" id="notes"></p>
+<br>
+			
+<div><input class="button" type="button" value="Submit" onclick="createDog();"><!--move to main page displaying other dogs--></div>
+</body>
